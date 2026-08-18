@@ -8,31 +8,29 @@
     <script>
         let a = ["vikas", "rahul", "aman", "yash"];
 
-        console.log("Original array:", a);
+        console.log("1. Original:", [...a]);
 
-        
-        let data = a.push("rohit");
-        console.log("After push:", a);
-        console.log("Length:", data);
 
-        
-        data = a.pop();
-        console.log("Popped element:", data);
-        console.log("After pop:", a);
-  
+        a.push("rohit");
+        console.log("2. After PUSH:", [...a]);
 
-        data = a.unshift("neha");
-        console.log("After unshift:", a);
-        console.log("Length:", data);
+
+        let data = a.pop();
+        console.log("3. POP removed:", data);
+        console.log("   After POP:", [...a]);
+
+
+        a.unshift("neha");
+        console.log("4. After UNSHIFT:", [...a]);
 
         data = a.shift();
-        console.log("Shifted element:", data);
-        console.log("After shift:", a);
+        console.log("5. SHIFT removed:", data);
+        console.log("   After SHIFT:", [...a]);
 
         let b = a.slice(1, 3);
-        console.log("Slice:", b);
+        console.log("6. SLICE result:", [...b]);
 
-        console.log("Final array:", a);
+        console.log("7. Original array after SLICE:", [...a]);
     </script>
 </head>
 
