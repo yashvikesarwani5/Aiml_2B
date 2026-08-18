@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+
+    <script>
+        let a = ["vikas", "rahul", "aman", "yash"];
+
+        console.log("Original array:", a);
+
+        
+        let data = a.push("rohit");
+        console.log("After push:", a);
+        console.log("Length:", data);
+
+        
+        data = a.pop();
+        console.log("Popped element:", data);
+        console.log("After pop:", a);
+  
+
+        data = a.unshift("neha");
+        console.log("After unshift:", a);
+        console.log("Length:", data);
+
+        data = a.shift();
+        console.log("Shifted element:", data);
+        console.log("After shift:", a);
+
+        let b = a.slice(1, 3);
+        console.log("Slice:", b);
+
+        console.log("Final array:", a);
+    </script>
+</head>
+
+<body>
+    <h1>Array Operations</h1>
+</body>
+</html>
