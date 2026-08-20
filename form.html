@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            let n = document.getElementById("Fname").value
+            if(n ==="" || (typeof n !== "string")){
+                alert("Please fill valid name");
+                    return false;
+            }
+            let m = document.getElementById("Mno").value
+            if(isNaN(m) || m === "" || m.length !== 10){
+                alert("Please fill valid number");
+                return false;
+            }
+            let o = document.getElementById("etext").value
+            if(o ==="" || !o.includes("@gmail.com")){
+                alert("Please fill valid Email");
+                    return false;
+            }
+            let p = document.getElementById("pass").value
+            if(p ==="" || p.length < 8){
+                alert("Please fill atleast 8 character");
+                    return false;
+            }
+            let r = document.getElementById("repass").value
+            if(p!==r){
+                alert("Please Match the password");
+                    return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="Navbar">
+        <h5>Registration</h5>
+    </div>
+    <form action="" onsubmit="return validate()">
+    <label for="">Name</label>
+    <input type="text" placeholder="Enter name" id="Fname">
+    <br>
+    <label for="">Mobile Number</label>
+    <input type="tel" placeholder="Enter Mobile no." id="Mno">
+    <br>
+    <label for="">Email</label>
+    <input type="email" placeholder="Enter Email" id="etext">
+    <br>
+    <label for="">Password</label>
+    <input type="password" placeholder="Enter Password" id="pass">
+    <br>
+    <label for="">Confirm Password</label>
+    <input type="password" placeholder="Enter first name" id="repass">
+    <br>
+    <button>Submit</button>
+    </form>
+</body>
+</html>
