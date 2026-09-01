@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Product Details</h2>
+
+<script>
+let product = {
+    productId: 101,
+    productName: "Laptop",
+    price: 2000,
+    quantity: 2,
+
+    calculationTotalPrice: function () {
+        return this.price * this.quantity;
+    },
+
+    updateQuantity: function (newQ) {
+        this.quantity = newQ;
+    },
+
+    displayDetails: function () {
+        console.log("Product ID: " + this.productId);
+        console.log("Product Name: " + this.productName);
+        console.log("Product Price: " + this.price);
+        console.log("Product Quantity: " + this.quantity);
+        console.log("Total Price: " + this.calculationTotalPrice());
+    }
+};
+
+product.displayDetails();
+
+product.updateQuantity(3);
+
+console.log("\nAfter updating quantity:");
+
+product.displayDetails();
+</script>
+</body>
+</html>
