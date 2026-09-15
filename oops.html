@@ -9,17 +9,75 @@
     
 </body>
 <script>
-    class Hello {
-    constructor() {
-        this.faculty = "vikas";
-        console.log("hello constructor");
+    // class Hello {
+//     constructor() {
+//         this.faculty = "vikas";
+//         console.log("hello constructor");
+//     }
+// }
+
+// let h = new Hello();
+// let h2 = new Hello();
+
+// console.log(h.faculty);
+
+// class Student {
+
+//     constructor(rollNumber, name, year) {
+//         this.rollNumber = rollNumber;
+//         this.name = name;
+//         this.year = year;
+//     }
+
+//     showStudent() {
+//         console.log("Roll Number:", this.rollNumber);
+//         console.log("Name:", this.name);
+//         console.log("Year:", this.year);
+//     }
+// }
+
+// let student1 = new Student(101, "Vikas", 1);
+// let student2 = new Student(102, "Krishna", 2);
+// let student3 = new Student(103, "Manav", 3);
+
+
+// student1.showStudent();
+// student2.showStudent();
+// student3.showStudent();
+
+
+
+class Student {
+    static college = "ABC College";
+
+    constructor(rollNumber, name, year) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.year = year;
+    }
+
+    display() {
+        console.log("Roll Number:", this.rollNumber);
+        console.log("Name:", this.name);
+        console.log("Year:", this.year);
+        console.log("College:", Student.college);
+        console.log("-------------------");
+    }
+
+    static showCollege() {
+        console.log("College:", Student.college);
     }
 }
 
-let h = new Hello();
-let h2 = new Hello();
+let student1 = new Student(101, "Vikas", 1);
+let student2 = new Student(102, "Rahul", 2);
+let student3 = new Student(103, "Amit", 3);
 
-console.log(h.faculty);
+student1.display();
+student2.display();
+student3.display();
+
+Student.showCollege();
     
 </script>
 </html>
